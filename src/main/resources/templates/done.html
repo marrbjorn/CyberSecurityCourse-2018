@@ -1,1 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>❄Velkommen❄</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" th:href="@{/css/style.css}" type="text/css" media="screen"/>
+        <style>
+            li {float:left;}
+            li a {display:block; color:white; text-align:center; padding:16px; text-decoration:none;}
+            li a:hover {background-color:#111111}
+        </style>
+    </head>
+    <body>
 
+        <h2 class="youtube">Good! One more listener!</h2>
+        
+            <ul style="list-style-type:none; margin:0; padding:0; overflow:hidden; background-color:#333333">
+                <li><a th:href="@{form}">Add more listeners</a></li>
+                <li><a th:href="@{login}">Or re-login</a></li>  
+                <div sec:authorize="hasAuthority('ADMIN')"><li><a th:href="@{fylkr}">Do you remember fylkr's song "do The Trick" from album "trick"?</a></li></div>
+                  <!--     ^ is not properly configured and I did not add dependencies for project.
+                      Thus, "should be" visible only for "ADMIN"-authority... but visible for all.
+                    For prevent this - we are able do not use these tricks; or use it properly (accordingly to documentation).
+                  -->
+            </ul>
+      
+    </body>
+</html>

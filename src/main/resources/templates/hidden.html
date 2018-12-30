@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>ToDo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" th:href="@{/css/style.css}" type="text/css" media="screen"/>
+    </head>
+    <body class="hidden">
+
+        <h1><u>TO DO</u>:</h1>
+        <div class="flask">
+           <div class="circle small_circle"></div>
+           <div class="circle next_circle"></div>
+           <div class="circle little_circle little_circle_white"></div>
+           <div class="circle little_circle little_circle_violet"></div>
+           <div class="circle little_circle little_circle_blue"></div>
+           <div class="flask_throat">
+                <div class="flask_throat_one"></div>
+                <div class="flask_throat_two"></div>
+                <div class="flask_throat_three"></div>
+                <div class="flask_throat_four"></div>
+           </div>
+           <div class="flask_bottom">
+                <div class="big_triangle">
+                 <div class="flask_bottom_one"></div>
+                 <div class="flask_bottom_two"></div>
+                 <div class="flask_bottom_three"></div>
+                 <div class="flask_bottom_four"></div>
+                 <div class="flask_bottom_five"></div>
+                 <div class="flask_bottom_six"></div>
+                </div>
+           </div>
+        </div>
+
+        <p id="ul">            
+                <code>
+                  &#9656; Do not forget to remove page or do "deny"-access to this page;<br />
+                  &#9656; Temporary storage for src-files of project (ask other team for review): <a th:href="@{formsrc?review=on}">URL</a>;<br />
+                  &#9656; Re-change debug credentials from "admin:admin" to strong ones;<br />
+                  &#9656; Do not forget update the "Powerful Custom CMS v2";<br /><br />
+                  <strong>...</strong>
+                </code>
+        </p>
+        <p id="ol">            
+                <code>
+                  &#9656; Will add "About"-page with "thanks"-words for this CSS-flask template; <br />
+                  &#9656; <del>Do the project;</del> <br /><br /><br /><br />
+                </code>
+            <strong><a th:href="@{login}">&#8618; TO LOGIN PAGE &#8617;</a></strong>
+        </p>
+        
+    </body>
+</html>
